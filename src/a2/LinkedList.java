@@ -18,6 +18,19 @@ public class LinkedList {
      * @param i    - index of node to remove
      */
     public void removeAtIndex(int i) {
+        Node index = null;
+        if (head == null) {
+               return;
+           }
+        else if (i == 0) {
+            head = null;
+            return;
+        } else for (int j = 0;j <= i; j++) {
+            index = head;
+            if (j == i) {
+                return;
+            }
+        }
     }
 
     /**
