@@ -18,13 +18,38 @@ public class LinkedList {
      * @param i    - index of node to remove
      */
     public void removeAtIndex(int i) {
+        Node index = null;
+        if (head == null) {
+               return;
+           }
+        else if (i == 0) {
+            head = null;
+            return;
+        } else for (int j = 0;j <= i; j++) {
+            index = head;
+            if (j == i) {
+                remove(i);
+                return;
+            }
+        }
     }
+
 
     /**
      * Compute and return the average of all the numbers in the linked list rounded down to the nearest integer
      * @return an int that is the floor of the mean of the list.
      */
-    public int mean() { return -1; }
+    public int mean() {
+        int fnl = 0;
+        int index = 0;
+        for (int i = 0; i <= size; i++); {
+            fnl = get(index) + fnl;
+            index ++;
+        }
+        int answer = fnl / size;
+        return (answer);
+    }
+
 
     /**
      * Return true if this linked list is equal to the list argument, false otherwise.
@@ -41,7 +66,7 @@ public class LinkedList {
      * @return true if the lists have the same elements in the same order, false otherwise
      */
     public boolean isEqual(LinkedList list2) {
-        return false;
+        return true;
     }
 
     /**
@@ -64,7 +89,7 @@ public class LinkedList {
      */
 
     public boolean isSymmetrical() {
-        return false;
+        return true;
     }
 
 
@@ -134,8 +159,6 @@ public class LinkedList {
      * @param list2
      */
     public void merge(LinkedList list2) { }
-
-
     /* Implementation given to you. Do not modify below this. */
 
     public int size() {
