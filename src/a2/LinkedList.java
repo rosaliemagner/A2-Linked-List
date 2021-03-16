@@ -17,15 +17,38 @@ public class LinkedList {
      *
      * @param i    - index of node to remove
      */
-    public void removeAtIndex(int i) {
+        public void removeAtIndex(int i) {
+        Node index = null;
+        if (head == null) {
+               return;
+           }
+        else if (i == 0) {
+            head = null;
+            return;
+        } else for (int j = 0;j <= i; j++) {
+            index = head;
+            if (j == i) {
+                remove(i);
+                return;
+            }
+        }
     }
+
 
     /**
      * Compute and return the average of all the numbers in the linked list rounded down to the nearest integer
      * @return an int that is the floor of the mean of the list.
      */
-    public int mean() { return -1; }
-
+    public int mean() {
+        int fnl = 0;
+        int index = 0;
+        for (int i = 0; i <= size; i++); {
+            fnl = get(index) + fnl;
+            index ++;
+        }
+        int answer = fnl / size;
+        return (answer);
+    }
     /**
      * Return true if this linked list is equal to the list argument, false otherwise.
      * Two lists are equal if they have the same size, and the same
